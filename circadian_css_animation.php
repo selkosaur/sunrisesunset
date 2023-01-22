@@ -14,16 +14,16 @@
 	// any valid css color string will work here, hex or rgba.
 	$bgColors = 
 		[
-			'astronomical_twilight_begin' => 'rgba(112, 57, 168, 1)',
-			'nautical_twilight_begin' => 'rgba(58, 79, 110, 1)',
-			'civil_twilight_begin' =>'rgba(246, 156, 238, 1)',
-			'civil_twilight_begin' => 'rgba(246, 156, 238, 1)',
-			'sunrise' =>'rgba(248, 235, 181, 1)',
-			'transit' => 'rgba(32, 36, 10, 1)',
-			'sunset' => 'rgba(255, 202, 123, 1)',
-			'civil_twilight_end' => 'rgba(56, 93, 148, 1)',
-			'nautical_twilight_end' => 'rgba(36, 67, 94, 1)',	
-			'astronomical_twilight_end' => 'rgba(5, 18, 50, 1)'
+			'astronomical_twilight_begin' => 'rgba(0, 0, 0, 1)',
+			'nautical_twilight_begin' => 'rgba(0, 0, 0, 1)',
+			'civil_twilight_begin' =>'rgba(0, 0, 0, 1)',
+			'civil_twilight_begin' => 'rgba(0, 0, 0, 1)',
+			'sunrise' =>'rgba(0, 0, 0, 1)',
+			'transit' => 'rgba(0, 0, 0, 1)',
+			'sunset' => 'rgba(0, 0, 0, 1)',
+			'civil_twilight_end' => 'rgba(0, 0, 0, 1)',
+			'nautical_twilight_end' => 'rgba(0, 0, 0, 1)',	
+			'astronomical_twilight_end' => 'rgba(0, 0, 0, 1)'
 		];
 		
 	// Text colors to use at corresponding points of the day/night cycle
