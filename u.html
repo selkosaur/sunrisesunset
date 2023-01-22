@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		
+		<link href="https://fonts.googleapis.com/css?family=Alegreya:400,700" 
+			rel="stylesheet">
+		
+		<link rel="stylesheet"  
+			href="css.css" />
+			
+		
+		<title>
+			Circadian CSS with PHP - by @shawnfromportland
+		</title>
+		
+		<!-- build animation keyframes based on % during the day at which different circadian points occur -->
+<style type="text/css">
+	@keyframes color-animation {
+		/* 
+			the colors at 
+			"midnight"
+		*/
+		0%, 100% {
+			background: rgba(0, 7, 22, 1);
+			color: #f7ca83;
+		}
+		
+						/* The color during astronomical_twilight_begin */
+			    24% {
+			       background: rgba(39, 50, 79, 1);
+			       color: #f7ca83;
+			    }
+						/* The color during nautical_twilight_begin */
+			    27% {
+			       background: rgba(58, 79, 110, 1);
+			       color: #f7ca83;
+			    }
+						/* The color during civil_twilight_begin */
+			    29% {
+			       background: rgba(246, 156, 238, 1);
+			       color: #946ed2;
+			    }
+						/* The color during sunrise */
+			    32% {
+			       background: rgba(248, 235, 181, 1);
+			       color: #e28336;
+			    }
+						/* The color during transit */
+			    51% {
+			       background: rgba(32, 36, 10, 1);
+			       color: #c0ae68;
+			    }
+						/* The color during sunset */
+			    71% {
+			       background: rgba(255, 202, 123, 1);
+			       color: #dd3805;
+			    }
+						/* The color during civil_twilight_end */
+			    73% {
+			       background: rgba(56, 93, 148, 1);
+			       color: #f9e287;
+			    }
+						/* The color during nautical_twilight_end */
+			    76% {
+			       background: rgba(36, 67, 94, 1);
+			       color: #f7c283;
+			    }
+						/* The color during astronomical_twilight_end */
+			    78% {
+			       background: rgba(5, 18, 50, 1);
+			       color: #f7ca83;
+			    }
+			}
+
+	body{
+		/* animate the backrground in a 24 hour cycle */
+		animation: color-animation 86400s linear -51054s infinite normal;
+	}
+
+		a, a:visited, a:active{
+		animation: color-animation 86400s linear -51054s infinite normal;
+	}
+</style>	</head>
+	
+	<body>
+		<!-- 
+			Load a header image that corresponds 
+			to the current time of day (relative 
+			to the target timezone set in 
+			circadian_css_animation.php config section 
+		-->
+		<img src="headerpics/day3.png" alt="day3.png" id="mainpic" class="center"/>
+		<h1 class="center">
+			Circadian CSS<br />with PHP
+		</h1>
+		<h2 class="name">
+			by <a href="https://github.com/shawnfromportland" target="_blank" class="nounderline">shawnfromportland</a>
+		</h2>
+		
+		<p>
+			In this example page, the background color animates between colors in real-time (with no javascript) according to the timezone and color values you set up the Config section of the circadian_css_animation.php script. 
+		</p>
+		
+		<p id="dayCycleWindow">
+			This sample window shows your animation as defined in the config section of circadian_css_animation.php, cycling a 24 hour period over just 15 seconds.
+		</p>
+	</body>
+</html>
