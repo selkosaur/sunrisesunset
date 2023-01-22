@@ -7,6 +7,12 @@ href="css.css" />
 rel="stylesheet">
 	<title>??????</title>	
 <?php
+	/* 
+				Configure the configuration section 
+				of circadian_css_animation.php
+				to match your own needs
+			*/
+	
 require('circadian_css_animation.php');
 ?>
 
