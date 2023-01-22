@@ -14,7 +14,7 @@
 	// any valid css color string will work here, hex or rgba.
 	$bgColors = 
 		[
-			'astronomical_twilight_begin' => 'rgba(39, 50, 79, 1)',
+			'astronomical_twilight_begin' => 'rgba(112, 57, 168, 1)',
 			'nautical_twilight_begin' => 'rgba(58, 79, 110, 1)',
 			'civil_twilight_begin' =>'rgba(246, 156, 238, 1)',
 			'civil_twilight_begin' => 'rgba(246, 156, 238, 1)',
