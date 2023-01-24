@@ -9,13 +9,18 @@ rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Kavoon" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">  
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">  
 
   <title>so</title>
-<style>
-body {
+</head>
+  <style>
+    body {
 font-family: 'Alegreya', "B612 Mono", "Segoe UI", "Tacoma",sans-serif;
 background-color: #E9E4D8;
+background-attachment: fixed;
 text-transform: lowercase;
+/*background-image:url("https://images.unsplash.com/photo-1586943101559-4cdcf86a6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjQwMzA0fQ&q=85&fm=jpg&crop=entropy&cs=srgb&utm_source=chromeGoalCountdown&utm_medium=referral");*/
 }
   
 a:link {
@@ -26,13 +31,13 @@ a:visited {
   }
   
 b {
-  font-family: "Inconsolata", "Consolas", "B612 Mono", "Segoe UI", sans-serif; 
-  font-weight: bold;
+  font-family: /* "Fira Sans", */"Inconsolata", "Consolas", "B612 Mono", "Segoe UI", sans-serif; 
+  font-weight: normal;
   text-transform: uppercase;
   }
 
 nav {
-    position: absolute;
+  position: fixed;
   right: 0px;
   width: 200px;
   border: 0px solid #65696b;
@@ -47,9 +52,35 @@ nav a {
     transition: color 1s;
 } 
 nav a:hover {
-    color:#eeeeee;
+    color:#E9E4D8;
 }
+i{
+  font-family:"Pacifico", "Kavoon", 'Segoe UI', sans-serif;
+  font-style: normal;
+  font-size: 15px;
+}
+.widg1 {
+  width: 110px;
+}  
+
+.widg2{
+  width: 375px;
+  position:fixed;
+  right:-15px;
+  bottom: -110px;
+  transition: bottom 2s;
+}
+.widg2:hover {
+  bottom: 0px; 
   
+}
+.widg2 a {
+  color:#E9E4D8;
+}
+.widg3 {
+  width:320px;
+  
+}
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
@@ -73,8 +104,69 @@ nav a:hover {
   background: #CCC0A4; 
  
 }
-</style>
-</head>
+
+::selection {
+  background: #CCC0A4;
+}
+.resolutions::selection{
+  background:#eee;
+}
+.clock {
+    position: static;
+    top: 0px;
+    left: 50%;
+    /*transform: translateX(-50%) translateY(-50%); */
+    color: #CCC0A4;
+    font-size: 60px;
+    font-family: "Saira";
+    letter-spacing: 7px;
+}
+
+.wrapper {
+    width: 400px;
+    margin: 10% auto;
+}
+
+.content {
+    background: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 400px;
+}
+
+.date, .time {
+    font-weight: 300;
+    font-size: 1.5em;
+    padding-left: 20px;
+  
+}
+
+.date {
+    border-bottom: 0px solid #eee;
+    font-family: "Pacifico";
+     margin-bottom: -30px;
+}
+
+.time {
+    font-size: 3em;
+  display:none;
+}
+
+small {
+display:none;
+font-size: 0px;
+}
+
+.resolutions {
+  background-color: rgba(255,255,255,0.2);
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 20px;
+  padding-top: 0px;
+  border-radius: 5px;
+  border: 1px solid #CCC0A4;
+  width: fit-content;
+}
+  </style>
 <body>
 <nav>
 <a href="https://selkosaur.github.io/sunrisesunset/index.html">home</a><br>
@@ -83,14 +175,79 @@ nav a:hover {
 <a href="https://selkosaur.github.io/sunrisesunset/tools.html">tools</a>
 
 </nav>
-<a href="https://time.is/Fulton,_Howard,_Maryland" id="time_is_link" rel="nofollow" style="font-size:13px">in Fulton:</a>
+  
+<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+<script>
+function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();
+</script>
+<div id="date" class="date"></div>
+<div id="time" class="time"></div>
+    
+ <script>var d = new Date();
+var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+var weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var day = weekday[d.getDay()];
+
+var date = document.getElementById("date");
+var time = document.getElementById("time");
+
+function getDate() {
+    date.innerHTML = day + ", " +monthNames[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
+}
+
+function timer() {
+    setTimeout(timer, 1000);
+    var d = new Date();
+    var hours = d.getHours();
+    var minutes = d.getMinutes();
+    var ampm = hours <= 11 ? 'am' : 'pm';
+    var strTime = [hours % 12,
+                  (minutes < 10 ? "0" + minutes : minutes)
+                  ].join(':') + ampm;
+    time.innerHTML = strTime;
+    setTimeout(timer, 1000);
+}
+
+getDate();
+timer();
+   </script>
+
+<small><a href="https://time.is/Fulton,_Howard,_Maryland" id="time_is_link" rel="nofollow" style="font-size:13px">in Fulton:</a></small>
 <span id="Fulton__Howard__Maryland_z161" style="font-size:13px"></span>
 <script src="//widget.time.is/en.js"></script>
 <script>
-time_is_widget.init({Fulton__Howard__Maryland_z161:{template:"TIME<br>DATE<br>SUN", time_format:"12hours:minutes:seconds AMPM", date_format:"dayname, monthname dnum, year", sun_format:"🌅 sunrise: <b> sr12hour:srminute srAMPM </b><br>🌆 sunset: <b>ss12hour:ssminute ssAMPM</b><br>☀️ daylight: dlhoursh dlminutesm", coords:"39.1509400,-76.9230300"}});
+time_is_widget.init({Fulton__Howard__Maryland_z161:{template:"TIME<br>DATE<br>SUN", time_format:"<small>12hours:minutes:seconds AMPM</small>", date_format:"<small><i>dayname, monthname dnum, year</i></small>", sun_format:"🌅 sunrise: <b> sr12hour:srminute srAMPM </b><br>🌆 sunset: <b>ss12hour:ssminute ssAMPM</b><br>☀️ daylight: dlhoursh dlminutesm", coords:"39.1509400,-76.9230300"}});
 </script>
   
-  <br>
+  <br><div class="resolutions">
   <h2>resolutions 2023</h2>
   <ul>
 <li>volunteer more (e.g find a program to volunteer at at least biweekly</li>
@@ -101,17 +258,14 @@ time_is_widget.init({Fulton__Howard__Maryland_z161:{template:"TIME<br>DATE<br>SU
 <li>try to designate time for deep breathing</li>
 <li>go to doctor for routine checkup</li>
   </ul>
-  
- <a class="weatherwidget-io" href="https://forecast7.com/en/39d15n76d92/fulton/?unit=us" data-label_1="fulton" data-font="Trebuchet MS" data-icons="Climacons Animated" data-mode="Current" data-days="3" >fulton</a>
+  </div>
+
+<div class="widg2">  
+<a class="weatherwidget-io" href="https://forecast7.com/en/39d15n76d92/fulton/?unit=us" data-label_1="fulton" data-font="Trebuchet MS" data-icons="Climacons Animated" data-days="5" data-theme="beige" data-basecolor="" data-accent="" >fulton</a>
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
+  </script>  </div>
   
-  <a class="weatherwidget-io" href="https://forecast7.com/en/39d15n76d92/fulton/?unit=us" data-label_1="fulton" data-font="Trebuchet MS" data-icons="Climacons Animated" data-mode="Current" data-days="3" data-textcolor="#ffffff" >fulton</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
-  
- <iframe src="https://indify.co/widgets/live/weather/XIPDsWqIF8jkDDomAl2M">/<iframe> 
+
 </body>
 </html>
