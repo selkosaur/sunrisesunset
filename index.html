@@ -12,19 +12,35 @@ rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">  
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">  
-
+<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono&amp;family=Calistoga&amp;family=Lilita+One&amp;family=Major+Mono+Display&amp;family=Rubik+Mono+One&amp;family=Space+Mono:wght@700&amp;family=VT323&amp;family=Xanh+Mono&amp;display=swap" rel="stylesheet">
   <title>so</title>
 </head>
-  <style>
-    body {
+
+<style>html{
+  scroll-behavior: smooth;
+}
+body {
 font-family: 'Alegreya', "B612 Mono", "Segoe UI", "Tacoma",sans-serif;
 background-color: #E9E4D8;
 background-attachment: fixed;
+background-size: cover;
+background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/04/Blank3x2.svg');
 text-transform: lowercase;
 cursor: url('https://img.icons8.com/material-two-tone/11/null/blue-pointer.png'), auto;
 /*background-image:url("https://images.unsplash.com/photo-1586943101559-4cdcf86a6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjQwMzA0fQ&q=85&fm=jpg&crop=entropy&cs=srgb&utm_source=chromeGoalCountdown&utm_medium=referral");*/
 }
+.nightskytheme {
+background-image:url('https://images.unsplash.com/photo-1586943101559-4cdcf86a6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjQwMzA0fQ&q=85&fm=jpg&crop=entropy&cs=srgb&utm_source=chromeGoalCountdown&utm_medium=referral');    
+}
+
+.cutecartoontheme {
+background-image: url('https://mblogthumb-phinf.pstatic.net/MjAyMjA0MjRfMjcy/MDAxNjUwNzQ3NjU1OTgx.uy-UCktADW9zYwN85gHNZQAJ8CSwqwVJmn10A9U96m4g.heUGJYOWjhR55BUpukMHRvY6m6xaw-7cojPctBwoxYkg.JPEG.uuueeee/%25EC%259E%2594%25EB%2594%2594_%25EB%25B0%25B0%25EA%25B2%25BD%25ED%2599%2594%25EB%25A9%25B4_pc.JPG?type=o_webp');
   
+}
+
+.cutecartoon2theme {
+  background-image: url('https://user-images.githubusercontent.com/123060573/215395560-2ed20080-9ef1-4642-8a4f-f60aa521ce5c.jpg');
+}
 a:link {
   color: #685B3B;
   cursor: url('https://img.icons8.com/material-rounded/12/null/hand-cursor.png'), auto;
@@ -66,6 +82,31 @@ nav ul {
   padding: 0px;
   list-style-type: none;
   margin: 0;
+}
+
+button#bgchange {
+  background-color: transparent;
+  border: 1px solid white;
+  font-family: 'Calistoga',"Pacifico",'Kavoon','Alegreya';
+  border-radius: 5px;
+  transition: 0.2s;
+  color:#E9E4D8;
+  padding: 5px;
+  margin: 10px 0px 0px 0px;
+  
+}
+
+button:hover#bgchange{
+  color:white;
+  font-style: italic;
+  border: 1px solid white;
+}
+
+button#bgchange:active{
+  background-color: rgba(255,255,255,0.1);
+  color:#7E7255;
+  border: 1px solid #7E7255;
+  /*padding:5px 5px;*/ 
 }
 
 #sunrisewidget i{
@@ -194,7 +235,7 @@ hr {
 .accordion {
   background-color: transparent;
   color: #685B3B;
-  cursor: pointer;
+  cursor: url('https://img.icons8.com/material-rounded/12/null/hand-cursor.png'), auto;
   padding: 5px 0px;
   width: 100%;
   border: none;
@@ -232,26 +273,25 @@ hr {
   font-size: smaller;
   color: inherit;
 }
-
-  </style>
-<body>
+</style>
+<body id="ImgGallery">
 <nav>
   <ul>
     <li> <a href="https://gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> gmail</a></li>
 <li>   <a href="https://sheets.google.com"><i class="fa fa-table" aria-hidden="true"></i> sheets</a></li></ul>
   <hr><ul>
-  <li><a href="https://selkosaur.github.io/sunrisesunset/index.html"><i class="fa fa-github-alt" aria-hidden="true"></i> home</a></li><li>
+  <li><a href="https://github.com/selkosaur/sunrisesunset"><i class="fa fa-github-alt" aria-hidden="true"></i> codes</a></li><li>
   </li><li><a href="https://codepen.io"><i class="fa fa-codepen" aria-hidden="true"></i> pen </a></li>
  </ul>
   <hr>
-  <button class="accordion">main projects</button>
+  <button class="accordion"><i class="fa fa-file-code-o" aria-hidden="true"></i> main projects</button>
 <div class="panel">
   <ul><li><a href="https://selkosaur.github.io/sunrisesunset/">index</a></li>
 <li><a href="https://selkosaur.github.io/sunrisesunset/clock.html">clock</a></li>
 <li><a href="https://selkosaur.github.io/sunrisesunset/notepad.html">notepad</a></li></ul>
 </div>
 
-<button class="accordion">unneeded</button>
+<button class="accordion"><i class="fa fa-moon-o" aria-hidden="true"></i> unneeded</button>
 <div class="panel">
   <ul><li><a href="https://selkosaur.github.io/sunrisesunset/sun.html">sun widget</a></li>
 <li><a href="https://selkosaur.github.io/sunrisesunset/tools.html">tool iframes</a></li>
@@ -263,10 +303,11 @@ hr {
 </ul>
 </div>
 
-<button class="accordion">empty for now</button>
+  <button class="accordion"><i class="fa fa-meh-o staticfa" aria-hidden="true"></i> empty for now</button>
 <div class="panel">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><ul> <li> hey </li></ul>
 </div>
+  <button type="button" id="bgchange" onclick="rotateGallery()"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> change bgs!</button>
 </nav>
   
 <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
@@ -368,6 +409,8 @@ var i;
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
+    var icon = this.firstElementChild;
+    icon.classList.toggle("fa-spin");
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
@@ -377,5 +420,15 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 </script>
+
+<script>var counter = 0,
+  gallery = ["https://upload.wikimedia.org/wikipedia/commons/0/04/Blank3x2.svg","https://mblogthumb-phinf.pstatic.net/MjAyMjA0MjRfMjcy/MDAxNjUwNzQ3NjU1OTgx.uy-UCktADW9zYwN85gHNZQAJ8CSwqwVJmn10A9U96m4g.heUGJYOWjhR55BUpukMHRvY6m6xaw-7cojPctBwoxYkg.JPEG.uuueeee/%25EC%259E%2594%25EB%2594%2594_%25EB%25B0%25B0%25EA%25B2%25BD%25ED%2599%2594%25EB%25A9%25B4_pc.JPG?type=o_webp", "https://mblogthumb-phinf.pstatic.net/MjAyMjAyMTdfMjEg/MDAxNjQ1MDk4Mjk1NjYx.wgwHgxmDLOslKbyPdce6tcSE5qO760372LeY4wvO_VUg.dOIR5qZvILWb1AhVbzaRQjKxlnWQp49FG2BTTPDa3rsg.JPEG.uuueeee/IMG_3188.JPG?type=o_webp", "https://mblogthumb-phinf.pstatic.net/MjAyMTExMDZfMjgg/MDAxNjM2MTI5NTkwMDA3.weniyosJh_uXvJgnvFjGg2hDxuSs5U-vPdP20C7Y23kg.hAQJCfFKqLBxbnzAQCgsWlesro_sX5PTbXptXVTjXe4g.JPEG.uuueeee/ginkgo_wallpaper_-_pc.JPG?type=o_webp", "https://mblogthumb-phinf.pstatic.net/MjAyMTA2MDNfMzAg/MDAxNjIyNjkxOTgxMDE4.nz5fQ3alEYpZ6DjQlaspFT5I1nifGJcyMuWpF5lo7B8g.Pnu21bbm_LqyanJEpeDuHOZVch0KPNjqqSYQVKCBxtYg.JPEG.uuueeee/IMG_3023.JPG?type=o_webp", "https://mblogthumb-phinf.pstatic.net/MjAyMTA1MDJfODAg/MDAxNjE5OTU4OTQ0MDQw.EGFNHGS5jOJL6xsdrXWL610wfzG-Rib_4Y8V9Yiwz6gg.Z2llh31vJxGqluVvlVJ950fHN8jEbnabKJNCKfvzdh0g.JPEG.uuueeee/snooze_wallpaper_2_-_pc.JPG?type=o_webp", "https://mblogthumb-phinf.pstatic.net/MjAyMTA0MDFfMTc5/MDAxNjE3MjY5MjE5MTE5.DR6b7SK-905u2H8yZPH_DXUwARjKCN-MUGvsTOer2ngg.LInxMTkVUfrZTPBWyTOl9aFC1lchysY6dNi_uxwE3zMg.JPEG.uuueeee/tulip_wallpaper-_pc.JPG?type=o_webp",'https://images.unsplash.com/photo-1586943101559-4cdcf86a6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjQwMzA0fQ&q=85&fm=jpg&crop=entropy&cs=srgb&utm_source=chromeGoalCountdown&utm_medium=referral'],
+  rotateGallery = function () {
+      document.getElementById("ImgGallery").style.backgroundImage = "url("+gallery[counter]+")";
+      counter++;
+      if (counter >= gallery.length) {
+          counter = 0;
+      }
+  };</script>
 </body>
 </html>
