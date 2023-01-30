@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/817/817757.png" type="image/x-icon" />
 <link href='https://fonts.googleapis.com/css?family=B612 Mono' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700" 
@@ -11,28 +12,31 @@ rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">  
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">  
-<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Calistoga&family=Lilita+One&family=Major+Mono+Display&family=Rubik+Mono+One&family=Space+Mono:wght@700&family=VT323&family=Xanh+Mono&display=swap" rel="stylesheet">
 
   <title>so</title>
 </head>
-  
   <style>
-  body {
+    body {
 font-family: 'Alegreya', "B612 Mono", "Segoe UI", "Tacoma",sans-serif;
 background-color: #E9E4D8;
 background-attachment: fixed;
 text-transform: lowercase;
+cursor: url('https://img.icons8.com/material-two-tone/11/null/blue-pointer.png'), auto;
 /*background-image:url("https://images.unsplash.com/photo-1586943101559-4cdcf86a6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjQwMzA0fQ&q=85&fm=jpg&crop=entropy&cs=srgb&utm_source=chromeGoalCountdown&utm_medium=referral");*/
 }
   
 a:link {
   color: #685B3B;
+  cursor: url('https://img.icons8.com/material-rounded/12/null/hand-cursor.png'), auto;
   }  
 a:visited {
   color: #685B3B;
   }
   
-b {
+#sunrisewidget{
+  pointer-events: none;
+}
+#sunrisewidget b {
   font-family: /* "Fira Sans", */"Inconsolata", "Consolas", "B612 Mono", "Segoe UI", sans-serif; 
   font-weight: normal;
   text-transform: uppercase;
@@ -47,6 +51,7 @@ nav {
   padding: 10px;
   background-color: #CCC0A4;
   font-family: 'Kavoon', 'Segoe UI', 'Tacoma', sans-serif;
+  color: #685B3B;
  } 
 
 nav a {
@@ -56,7 +61,14 @@ nav a {
 nav a:hover {
     color:#E9E4D8;
 }
-i{
+
+nav ul {
+  padding: 0px;
+  list-style-type: none;
+  margin: 0;
+}
+
+#sunrisewidget i{
   font-family:"Pacifico", "Kavoon", 'Segoe UI', sans-serif;
   font-style: normal;
   font-size: 15px;
@@ -78,6 +90,7 @@ i{
 }
 .widg2 a {
   color:#E9E4D8;
+  pointer-events: none;
 }
 .widg3 {
   width:320px;
@@ -86,6 +99,8 @@ i{
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
+  cursor: auto; 
+
 }
 
 /* Track */
@@ -98,13 +113,16 @@ i{
 ::-webkit-scrollbar-thumb {
   background: #CCC0A4;
   border-radius: 5px;
+    cursor: auto; 
+
   
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #CCC0A4; 
- 
+   cursor: auto; 
+
 }
 
 ::selection {
@@ -172,21 +190,83 @@ font-size: 0px;
 hr {
  border:1px solid papayawhip;
 }
+
+.accordion {
+  background-color: transparent;
+  color: #685B3B;
+  cursor: pointer;
+  padding: 5px 0px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: inherit;
+  transition: 0.4s;
+  font-family: "Kavoon";
+  
+}
+
+.active, .accordion:hover {
+  background-color: rgba(255,255,255,0);
+  color: #E9E4D8;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: inherit;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0px 5px;
+  background-color: transparent;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-size: smaller;
+  color: inherit;
+}
+
   </style>
 <body>
 <nav>
-<a href="https://selkosaur.github.io/sunrisesunset/index.html">home</a><br>
-<a href="https://selkosaur.github.io/sunrisesunset/srsswidget.html">sunsetwidgetog</a><br>
-<a href="https://selkosaur.github.io/sunrisesunset/w2.html">experiment</a><br>
-<a href="https://selkosaur.github.io/sunrisesunset/tools.html">tools</a>
-<br>
-  <a href="https://selkosaur.github.io/sunrisesunset/notepad.html">notepad</a>
-<br>
+  <ul>
+    <li> <a href="https://gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> gmail</a></li>
+<li>   <a href="https://sheets.google.com"><i class="fa fa-table" aria-hidden="true"></i> sheets</a></li></ul>
+  <hr><ul>
+  <li><a href="https://selkosaur.github.io/sunrisesunset/index.html"><i class="fa fa-github-alt" aria-hidden="true"></i> home</a></li><li>
+  </li><li><a href="https://codepen.io"><i class="fa fa-codepen" aria-hidden="true"></i> pen </a></li>
+ </ul>
   <hr>
-  <a href="https://gmail.com">inbox</a>
-  <br>
-   <a href="https://sheets.google.com">sheets</a>
-  
+  <button class="accordion">main projects</button>
+<div class="panel">
+  <ul><li><a href="https://selkosaur.github.io/sunrisesunset/">index</a></li>
+<li><a href="https://selkosaur.github.io/sunrisesunset/clock.html">clock</a></li>
+<li><a href="https://selkosaur.github.io/sunrisesunset/notepad.html">notepad</a></li></ul>
+</div>
+
+<button class="accordion">unneeded</button>
+<div class="panel">
+  <ul><li><a href="https://selkosaur.github.io/sunrisesunset/sun.html">sun widget</a></li>
+<li><a href="https://selkosaur.github.io/sunrisesunset/tools.html">tool iframes</a></li>
+<li><a href="https://selkosaur.github.io/sunrisesunset/calculator.html">calculator</a></li>
+<li><a href="https://selkosaur.github.io/sunrisesunset/extraweather.html">extra weather widgets</a></li>
+<li><a href="https://selkosaur.github.io/sunrisesunset/notepad2.html">older notepad ver</a></li>
+<li><a href="https://selkosaur.github.io/sunrisesunset/srsswidget.html">original sun widget</a></li>
+<li><a href="https://selkosaur.github.io/sunrisesunset/w2.html">sun dark ver</a></li>
+</ul>
+</div>
+
+<button class="accordion">empty for now</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><ul> <li> hey </li></ul>
+</div>
 </nav>
   
 <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
@@ -252,13 +332,13 @@ function timer() {
 getDate();
 timer();
    </script>
-
+<div id="sunrisewidget">
 <small><a href="https://time.is/Fulton,_Howard,_Maryland" id="time_is_link" rel="nofollow" style="font-size:13px">in Fulton:</a></small>
 <span id="Fulton__Howard__Maryland_z161" style="font-size:13px"></span>
 <script src="//widget.time.is/en.js"></script>
 <script>
 time_is_widget.init({Fulton__Howard__Maryland_z161:{template:"TIME<br>DATE<br>SUN", time_format:"<small>12hours:minutes:seconds AMPM</small>", date_format:"<small><i>dayname, monthname dnum, year</i></small>", sun_format:"🌅 sunrise: <b> sr12hour:srminute srAMPM </b><br>🌆 sunset: <b>ss12hour:ssminute ssAMPM</b><br>☀️ daylight: dlhoursh dlminutesm", coords:"39.1509400,-76.9230300"}});
-</script>
+  </script></div>
   
   <br><div class="resolutions">
   <h2>resolutions 2023</h2>
@@ -279,6 +359,23 @@ time_is_widget.init({Fulton__Howard__Maryland_z161:{template:"TIME<br>DATE<br>SU
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
   </script>  </div>
   
+  <iframe src="https://selkosaur.github.io/sunrisesunset/notepad.html" style="border:none; height: 300px; width:50%; display:inline;"></iframe>
+  
+  <script>
+var acc = document.getElementsByClassName("accordion");
+var i;
 
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
 </body>
 </html>
