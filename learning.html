@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<style>
+div {padding: 5px; border: 1px solid green;margin: 5px;}
+.timeclass{
+font-family: "Arial";
+}
+</style>
+<body>
+<h1>The Element Object</h1>
+<h2>The getElementsByTagName() Method</h2>
+<div>
+<p>1</p>
+<p>2</p>
+<p>Thu Feb 02 2023 07:00:00 GMT-0500 (Eastern Standard Time)</p>
+<p>4</p>
+</div>
+<div>
+<p>1</p>
+<p>2</p>
+<p>Fri Feb 03 2023 07:00:00 GMT-0500 (Eastern Standard Time)</p>
+<p>4</p>
+</div>
+<div>
+<p>1</p>
+<p>2</p>
+<p>Sun Feb 05 2023 05:00:00 GMT-0500 (Eastern Standard Time)</p>
+<p>4</p>
+</div>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul>
+
+<p>Click "Change" to change the text of the first list item.</p>
+<button onclick="myFunction()">Change</button>
+
+<script>
+function myFunction() {
+  const divlist = document.getElementsByTagName("DIV");
+  let divlen = divlist.length;
+  for (let i = 0; i < divlen; i++){
+  var datetext = divlist[i].getElementsByTagName("P")[2].innerHTML;
+  var dateobj = new Date(datetext);
+  divlist[i].getElementsByTagName("P")[2].innerHTML = dateobj.toDateString() + ' <span class="timeclass">' + dateobj.toLocaleTimeString() + '</span>';
+  divlist[i].getElementsByTagName("P")[2].style.color = "red";
+}
+  }
+</script>
+
+</body>
+</html>
