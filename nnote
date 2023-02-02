@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <head>
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/817/817757.png" type="image/x-icon" />
+<link href='https://fonts.googleapis.com/css?family=B612 Mono' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700" 
+rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lilita One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kavoon" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">  
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">  
+  
+ <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Calistoga&family=Eczar&family=Lilita+One&family=Major+Mono+Display&family=Rubik+Mono+One&family=Space+Mono:wght@700&family=VT323&family=Xanh+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Azeret+Mono&family=Calistoga&family=Eczar&family=Lilita+One&family=Major+Mono+Display&family=Rubik+Mono+One&family=Space+Mono:wght@700&family=VT323&family=Xanh+Mono&display=swap" rel="stylesheet">
+</head>
+
+<style>
+body {
+  font-family: "Trebuchet MS"
+    background: transparent;
+  padding: 5px;
+}
+
+#container{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: transparent;
+  padding: 5px;
+  border: 0px solid transparent;
+  overflow: hidden;
+  border-radius: 0px;
+  position:absolute;
+  bottom: 0px;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+}
+.autosize {
+  resize: none;
+  overflow: hidden;
+}
+
+#texttitle{
+  font-size: 120%;
+  background: #84A98C;
+  font-family:  "Space Mono", "Calistoga","Azeret Mono", sans-serif;
+  padding-bottom: 0px;
+  padding: 5px 5px 0px 5px;
+  margin:0px;
+  color: #354F52;
+  border: 2px solid transparent;
+  border-bottom: 0px;
+  border-radius: 15px 15px 0px 0px;
+  box-shadow: 0 0 0 3px #52796F;
+  
+}
+
+#texttitle::placeholder { /*to adjust the appearance of the placeholder text in the title*/
+  color:rgba(53, 79, 82,0.5);
+}
+#notebody{
+  background:#CAD2C5;
+  font-family: 'Alegreya Sans', "Eczar";
+  font-size: 100%;
+  color: #52796F;
+  padding: 5px;
+  border: 8px solid transparent;
+  border-top: 4px dotted transparent;
+  border-radius: 0px 0px 15px 15px;
+  box-shadow: 0 0 0 3px #52796F;
+  height: 100%;
+}
+
+#notebody::placeholder{
+  color: rgba(53, 79, 82,0.5);
+  font-style: italic;
+}
+
+textarea {
+  font-family: inherit;
+  outline: none;
+  resize:none;
+  border: 0px;
+  cursor: auto;
+}
+
+textarea:focus {
+  outline:none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* width of textarea scrollbar*/
+textarea::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;  
+}
+textarea:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(82, 121, 111,0.2);
+}
+
+/* Set the style for a textarea scrollbar thumb. */
+textarea::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: rgba(255,255,255,0);
+
+}
+/* Set the style for a textarea scrollbar thumb. */
+textarea::-webkit-scrollbar-thumb:hover {
+    border-radius: 2px;
+    background-color: rgba(82, 121, 111,0.6);
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.5);
+  border-radius: 15px;
+  
+  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #84A98C; 
+ 
+}
+
+
+::selection{
+  color: white;
+  background: #354F52;
+}
+  </style>
+
+<div id="container"><textarea id="texttitle"  spellcheck="false" class="autosize autoExpand" rows='1' data-min-rows='1' placeholder="✎ title"></textarea>
+  <textarea onInput="handleInput(event)"  id="notebody"  spellcheck="false" placeholder="notes go here..."></textarea></div>
+
+  <script>
+    var d = document;
+
+// not using this at the moment but might do later for graceful degradation...
+function supports_html5_storage() {
+  try {
+    return 'localStorage' in window && window['localStorage'] !== null;
+  } catch (e) {
+    return false;
+  }
+}
+
+d.addEventListener('DOMContentLoaded', function(){
+
+  var savedContent = localStorage.getItem("notepadcontent");
+  if(savedContent != null){
+    d.getElementById("container").value = savedContent;
+  }
+ 
+ 
+ d.getElementById("container").onkeyup = function(){
+  var data = d.getElementById("container").value;  localStorage.setItem("notepadcontent", data);
+  }
+});
+  </script>
+
+  <script>
+    let previousLength = 0;
+
+const handleInput = (event) => {
+  const bullet = "\u2661";
+  const newLength = event.target.value.length;
+  const characterCode = event.target.value.substr(-1).charCodeAt(0);
+
+  if (newLength > previousLength) {
+    if (characterCode === 10) {
+      event.target.value = `${event.target.value}${bullet} `;
+    } else if (newLength === 1) {
+      event.target.value = `${bullet} ${event.target.value}`;
+    }
+  }
+  
+  previousLength = newLength;
+}
+
+function getScrollHeight(elm){
+  var savedValue = elm.value
+  elm.value = ''
+  elm._baseScrollHeight = elm.scrollHeight
+  elm.value = savedValue
+}
+
+const textarea = document.getElementById("texttitle");
+
+function setHeight(elem) {
+  const style = getComputedStyle(elem, null);
+  const verticalBorders = Math.round(parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth));
+  const maxHeight = parseFloat(style.maxHeight) || 300;
+  
+  elem.style.height = "auto";
+
+  const newHeight = elem.scrollHeight + verticalBorders;
+  
+  elem.style.overflowY = newHeight > maxHeight ? "auto" : "hidden";
+  elem.style.height = Math.min(newHeight, maxHeight) + "px";
+}
+
+textarea.addEventListener("input", (e) => {
+  setHeight(e.target);
+});
+
+setHeight(textarea);
+    </script>
+  </body>
+</html>
