@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/817/817757.png" type="image/x-icon" />
+<link href='https://fonts.googleapis.com/css?family=B612 Mono' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700" 
+rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lilita One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kavoon" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">  
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">  
+
+  <title>so</title>
+</head>
+<style>
+
+body {
+font-family: 'Alegreya', "B612 Mono", "Segoe UI", "Tacoma",sans-serif;
+background-attachment: fixed; 
+text-transform: lowercase;
+background-image:url("https://images.unsplash.com/photo-1586943101559-4cdcf86a6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjQwMzA0fQ&q=85&fm=jpg&crop=entropy&cs=srgb&utm_source=chromeGoalCountdown&utm_medium=referral");
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+  
+a:link {
+  color: #685B3B;
+  }  
+a:visited {
+  color: #685B3B;
+  }
+  
+b {
+  font-family: "Fira Sans", "Inconsolata", "Consolas", "B612 Mono", "Segoe UI", sans-serif; 
+  font-weight: normal;
+  text-transform: uppercase;
+  }
+
+nav {
+  position: fixed;
+  right: 0px;
+  width: 200px;
+  border: 0px solid #65696b;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #CCC0A4;
+  font-family: 'Kavoon', 'Segoe UI', 'Tacoma', sans-serif;
+ } 
+
+nav a {
+    text-decoration-line: none;
+    transition: color 1s;
+} 
+nav a:hover {
+    color:#E9E4D8;
+}
+i{
+  font-family:"Pacifico", "Kavoon", 'Segoe UI', sans-serif;
+  font-style: normal;
+  font-size: 15px;
+}
+.widg1 {
+  width: 110px;
+}  
+.widg2 {
+  width:320px;
+  
+}
+
+/* above is mostly junk from the other stuff
+
+
+
+, not applicable to what I'm doing here */
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  background-color: #E9E4D8;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #CCC0A4;
+  border-radius: 5px;
+  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #CCC0A4; 
+ 
+}
+
+::selection {
+  background: rosybrown;
+}
+  
+html {
+  height: 100%;
+}
+.container{
+    display: flex;
+  background: rgba(255,255,255,0);
+  padding:0px;
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+textarea {
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  padding: 1em;
+  border: 0;
+  box-sizing: border-box;
+  resize: none;
+  font-family: 'Alegreya', 'Tacoma', sans-serif;
+  transition: background 1s;
+  background: rgba(255,255,255,0);
+}
+textarea:focus{
+  background: mistyrose;
+  border: 0px solid white;
+  outline:none;
+}
+</style>
+  
+<body style="background: rgba(0,0,0,0)">
+  <div class="container">
+    <textarea id="notepad" placeholder="hey ..." spellcheck="false"></textarea></div>
+  <script>
+    var d = document;
+
+// not using this at the moment but might do later for graceful degradation...
+function supports_html5_storage() {
+  try {
+    return 'localStorage' in window && window['localStorage'] !== null;
+  } catch (e) {
+    return false;
+  }
+}
+
+d.addEventListener('DOMContentLoaded', function(){
+
+  var savedContent = localStorage.getItem("notepadcontent");
+  if(savedContent != null){
+    d.getElementById("notepad").value = savedContent;
+  }
+ 
+ 
+ d.getElementById("notepad").onkeyup = function(){
+  var data = d.getElementById("notepad").value;  localStorage.setItem("notepadcontent", data);
+  }
+});
+  </script>
+</body>
+</html>
