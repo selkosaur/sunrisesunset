@@ -1,101 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <base target="_top">
-  </head>
-  <body>
-    <head>
-<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/817/817757.png" type="image/x-icon" />
-<link href='https://fonts.googleapis.com/css?family=B612 Mono' rel='stylesheet'>
-  <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700" 
-rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Lilita One" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Kavoon" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">  
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">  
-  
- <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Calistoga&family=Eczar&family=Lilita+One&family=Major+Mono+Display&family=Rubik+Mono+One&family=Space+Mono:wght@700&family=VT323&family=Xanh+Mono&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Azeret+Mono&family=Calistoga&family=Eczar&family=Lilita+One&family=Major+Mono+Display&family=Rubik+Mono+One&family=Space+Mono:wght@700&family=VT323&family=Xanh+Mono&display=swap" rel="stylesheet">
-</head>
+ <head>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/817/817757.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=B612 Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lilita One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Kavoon" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Azeret+Mono&family=Calistoga&family=Eczar&family=Lilita+One&family=Major+Mono+Display&family=Rubik+Mono+One&family=Space+Mono:wght@700&family=VT323&family=Xanh+Mono&display=swap" rel="stylesheet">
+  <title>so</title>
+ </head>
+ <style>
 
-<style>
 body {
-  font-family: "Trebuchet MS"
-    background: transparent;
-  padding: 5px;
+font-family: 'Alegreya', "B612 Mono", "Segoe UI", "Tacoma",sans-serif;
+background-color: rgba(0,0,0,0);
 }
 
-#container{
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  background: transparent;
-  padding: 5px;
-  border: 0px solid transparent;
-  overflow: hidden;
-  border-radius: 0px;
-  position:absolute;
-  bottom: 0px;
-  top: 0px;
-  right: 0px;
-  left: 0px;
-}
-.autosize {
-  resize: none;
-  overflow: hidden;
-}
-
-#texttitle{
-  font-size: 120%;
-  background: #84A98C;
-  font-family:  "Space Mono", "Calistoga","Azeret Mono", sans-serif;
-  padding-bottom: 0px;
-  padding: 5px 5px 0px 5px;
-  margin:0px;
-  color: #354F52;
-  border: 2px solid transparent;
-  border-bottom: 0px;
-  border-radius: 15px 15px 0px 0px;
-  box-shadow: 0 0 0 3px #52796F;
-  
-}
-
-#texttitle::placeholder { /*to adjust the appearance of the placeholder text in the title*/
-  color:rgba(53, 79, 82,0.5);
-}
-#notebody{
-  background:#CAD2C5;
-  font-family: 'Alegreya Sans', "Eczar";
-  font-size: 100%;
-  color: #52796F;
-  padding: 5px;
-  border: 8px solid transparent;
-  border-top: 4px dotted transparent;
-  border-radius: 0px 0px 15px 15px;
-  box-shadow: 0 0 0 3px #52796F;
-  height: 100%;
-}
-
-#notebody::placeholder{
-  color: rgba(53, 79, 82,0.5);
-  font-style: italic;
-}
-
-textarea {
-  font-family: inherit;
-  outline: none;
-  resize:none;
-  border: 0px;
-  cursor: auto;
-}
-
-textarea:focus {
-  outline:none;
-}
+/*
+The scrollbars section
+*/
 
 /* width */
 ::-webkit-scrollbar {
@@ -108,6 +35,7 @@ textarea::-webkit-scrollbar {
   width: 5px;
   height: 5px;  
 }
+
 textarea:hover::-webkit-scrollbar-thumb {
   background-color: rgba(82, 121, 111,0.2);
 }
@@ -116,13 +44,17 @@ textarea:hover::-webkit-scrollbar-thumb {
 textarea::-webkit-scrollbar-thumb {
     border-radius: 2px;
     background-color: rgba(255,255,255,0);
-
 }
+
 /* Set the style for a textarea scrollbar thumb. */
 textarea::-webkit-scrollbar-thumb:hover {
     border-radius: 2px;
     background-color: rgba(82, 121, 111,0.6);
+}
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
 }
 
 /* Track */
@@ -133,27 +65,110 @@ textarea::-webkit-scrollbar-thumb:hover {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgba(255,255,255,0.5);
-  border-radius: 15px;
-  
-  
-}
+  border-radius: 15px;}
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #84A98C; 
- 
 }
 
-
-::selection{
-  color: white;
+::selection {
+ color: white;
   background: #354F52;
 }
-  </style>
+  
+html {
+  height: 100%;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: #52796F;
+  padding: 0px;
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  border: 3.5px solid #52796F;
+  border-radius: 20px;
+}
+textarea {
+  width: 100%;
+  font-size: 1.2em;
+  padding: 0em;
+  border: 10px solid #CAD2C5;
+  box-sizing: border-box;
+  resize: none;
+  font-family: 'Alegreya Sans','Eczar', 'Tacoma', sans-serif;
+  transition: all 1s;
+  background: #CAD2C5;
+  color: #52796F;
+  border-radius: 15px;
+  cursor: auto;
+}
 
-<div id="container"><textarea id="texttitle"  spellcheck="false" class="autosize autoExpand" rows='1' data-min-rows='1' placeholder="✎ title"></textarea>
-  <textarea onInput="handleInput(event)"  id="notebody"  spellcheck="false" placeholder="notes go here..."></textarea></div>
+#title {
+    font-family: "Space Mono", Consolas, Courier, monospace;
+    flex-grow: 0;
+    background-color: #84A98C;
+    border: 10px solid #84A98C;
+    color: #354F52;
+    font-size: 1.5em;
+    
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    overflow: hidden;
+    padding-bottom: 0em;
+}
 
+#title::placeholder { /*to adjust the appearance of the placeholder text in the title*/
+  color:rgba(53, 79, 82,0.5);
+}
+
+#notepad{
+    flex-grow:1;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    margin-top: 3px;
+    padding: 0.5em;
+    padding-left: 0.1em;
+}
+#notepad::placeholder{
+font-style: italic;
+
+}
+textarea:focus{
+  background: rgb(167, 194, 176);
+border:rgb(167, 194, 176) 10px solid ;
+  outline:none;
+  color: black;
+}
+ </style>
+ <!--  
+    
+    
+main body html begins here
+
+
+-->
+ <body style="background: rgba(0,0,0,0)">
+  <div class="container">
+   <textarea
+    id="title"
+    placeholder="✎ title"
+    spellcheck="false"
+    rows="1"
+    data-min-rows="1"
+   ></textarea>
+   <textarea
+    id="notepad"
+    oninput="handleInput(event)"
+    placeholder="notes go here ..."
+    spellcheck="false"
+   ></textarea>
+  </div>
   <script>
     var d = document;
 
@@ -169,19 +184,29 @@ function supports_html5_storage() {
 d.addEventListener('DOMContentLoaded', function(){
 
   var savedContent = localStorage.getItem("notepadcontent");
-  if(savedContent != null){
-    d.getElementById("container").value = savedContent;
+  var savedTitle = localStorage.getItem("titlecontent");
+  if(savedContent != null || savedTitle != null){
+    d.getElementById("notepad").value = savedContent;
+    d.getElementById("title").value = savedTitle;
   }
  
  
- d.getElementById("container").onkeyup = function(){
-  var data = d.getElementById("container").value;  localStorage.setItem("notepadcontent", data);
+ d.getElementById("notepad").onkeyup = function(){
+  var data = d.getElementById("notepad").value;  
+  var title = d.getElementById("title").value;  
+  localStorage.setItem("notepadcontent", data);
+  localStorage.setItem("titlecontent", title);
+  }
+   d.getElementById("title").onkeyup = function(){
+  var data = d.getElementById("notepad").value;  
+  var title = d.getElementById("title").value;  
+  localStorage.setItem("notepadcontent", data);
+  localStorage.setItem("titlecontent", title);
   }
 });
   </script>
-
   <script>
-    let previousLength = 0;
+let previousLength = 0;
 
 const handleInput = (event) => {
   const bullet = "\u2661";
@@ -198,15 +223,16 @@ const handleInput = (event) => {
   
   previousLength = newLength;
 }
-
-function getScrollHeight(elm){
+  </script>
+  <script>
+    function getScrollHeight(elm){
   var savedValue = elm.value
   elm.value = ''
   elm._baseScrollHeight = elm.scrollHeight
   elm.value = savedValue
 }
 
-const textarea = document.getElementById("texttitle");
+const textarea = document.getElementById("title");
 
 function setHeight(elem) {
   const style = getComputedStyle(elem, null);
@@ -226,6 +252,6 @@ textarea.addEventListener("input", (e) => {
 });
 
 setHeight(textarea);
-    </script>
-  </body>
+  </script>
+ </body>
 </html>
