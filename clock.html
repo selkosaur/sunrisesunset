@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
+ <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn-icons-png.flaticon.com/512/7108/7108267.png" rel="icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
   <title>clock?</title>
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/817/817757.png" type="image/x-icon" />
-  </head>
-  <style>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/817/817757.png" type="image/x-icon">
+ </head>
+ <style>
     body {
-    background: black;
+    background: rgb(0, 0, 0);
 }
 
 .clock {
@@ -20,16 +21,16 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    color: #17D4FE;
+    color: #90bac4;
     font-size: 60px;
     font-family: "Space Mono", "Rubik Mono One", "Orbitron", "Lucida Sans Typewriter", mono;
     letter-spacing: 7px;
    
 }
-  </style>
-  <body>
-    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-<script>
+ </style>
+ <body>
+  <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+  <script>
   function showTime(){
     var date = new Date();
     var h = date.getHours(); // 0 - 23
@@ -59,6 +60,6 @@
 }
 
 showTime();
-    </script>
-  </body>
+  </script>
+ </body>
 </html>
