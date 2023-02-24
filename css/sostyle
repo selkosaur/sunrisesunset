@@ -1,0 +1,261 @@
+html{
+  scroll-behavior: smooth;
+}
+@import url(https://fonts.googleapis.com/css2?family=Alegreya:wght@100;200;300;400;500;600;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@100;200;300;400;500;600;800;900&display=swap);
+
+
+body {
+font-family: 'Alegreya', "Source Sans Pro", "Segoe UI", "Tacoma",sans-serif;
+background-color: #E9E4D8;
+background-attachment: fixed;
+background-size: cover;
+background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/04/Blank3x2.svg');
+text-transform: lowercase;
+cursor: url('https://img.icons8.com/material-two-tone/11/null/blue-pointer.png'), auto;
+/*background-image:url("https://images.unsplash.com/photo-1586943101559-4cdcf86a6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjQwMzA0fQ&q=85&fm=jpg&crop=entropy&cs=srgb&utm_source=chromeGoalCountdown&utm_medium=referral");*/
+}
+.nightskytheme {
+background-image:url('https://images.unsplash.com/photo-1586943101559-4cdcf86a6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjQwMzA0fQ&q=85&fm=jpg&crop=entropy&cs=srgb&utm_source=chromeGoalCountdown&utm_medium=referral');    
+}
+
+.cutecartoontheme {
+background-image: url('https://mblogthumb-phinf.pstatic.net/MjAyMjA0MjRfMjcy/MDAxNjUwNzQ3NjU1OTgx.uy-UCktADW9zYwN85gHNZQAJ8CSwqwVJmn10A9U96m4g.heUGJYOWjhR55BUpukMHRvY6m6xaw-7cojPctBwoxYkg.JPEG.uuueeee/%25EC%259E%2594%25EB%2594%2594_%25EB%25B0%25B0%25EA%25B2%25BD%25ED%2599%2594%25EB%25A9%25B4_pc.JPG?type=o_webp');
+  
+}
+
+.cutecartoon2theme {
+  background-image: url('https://user-images.githubusercontent.com/123060573/215395560-2ed20080-9ef1-4642-8a4f-f60aa521ce5c.jpg');
+}
+a:link {
+  color: #685B3B;
+  cursor: url('https://img.icons8.com/material-rounded/12/null/hand-cursor.png'), auto;
+  }  
+a:visited {
+  color: #685B3B;
+  }
+  
+#sunrisewidget{
+  pointer-events: none;
+}
+#sunrisewidget b {
+  font-family: /* "Fira Sans", */"Inconsolata", "Consolas", "B612 Mono", "Segoe UI", sans-serif; 
+  font-weight: normal;
+  text-transform: uppercase;
+  }
+
+nav {
+  position: fixed;
+  right: 0px;
+  width: 200px;
+  border: 0px solid #65696b;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #CCC0A4;
+  font-family: 'Kavoon', 'Segoe UI', 'Tacoma', sans-serif;
+  color: #685B3B;
+ } 
+
+nav a {
+    text-decoration-line: none;
+    transition: color 1s;
+} 
+nav a:hover {
+    color:#E9E4D8;
+}
+
+nav ul {
+  padding: 0px;
+  list-style-type: none;
+  margin: 0;
+}
+
+button#bgchange {
+  background-color: transparent;
+  border: 1px solid white;
+  font-family: 'Calistoga',"Pacifico",'Kavoon','Alegreya';
+  border-radius: 5px;
+  transition: 0.2s;
+  color:#E9E4D8;
+  padding: 5px;
+  margin: 10px 0px 0px 0px;
+  
+}
+
+button:hover#bgchange{
+  color:white;
+  font-style: italic;
+  border: 1px solid white;
+}
+
+button#bgchange:active{
+  background-color: rgba(255,255,255,0.1);
+  color:#7E7255;
+  border: 1px solid #7E7255;
+  /*padding:5px 5px;*/ 
+}
+
+#sunrisewidget i{
+  font-family:"Pacifico", "Kavoon", 'Segoe UI', sans-serif;
+  font-style: normal;
+  font-size: 15px;
+}
+.widg1 {
+  width: 110px;
+}  
+
+.widg2{
+  width: 375px;
+  position:fixed;
+  right:-15px;
+  bottom: -110px;
+  transition: bottom 2s;
+}
+.widg2:hover {
+  bottom: 0px; 
+  
+}
+.widg2 a {
+  color:#E9E4D8;
+  pointer-events: none;
+}
+.widg3 {
+  width:320px;
+  
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  cursor: auto; 
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  background-color: #E9E4D8;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #CCC0A4;
+  border-radius: 5px;
+    cursor: auto; 
+
+  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #CCC0A4; 
+   cursor: auto; 
+
+}
+
+::selection {
+  background: #CCC0A4;
+}
+.resolutions::selection{
+  background:#eee;
+}
+.clock {
+    position: static;
+    top: 0px;
+    left: 50%;
+    /*transform: translateX(-50%) translateY(-50%); */
+    color: #CCC0A4;
+    font-size: 60px;
+    font-family: 'Calistoga', "Space Mono";
+    letter-spacing: 7px;
+}
+
+.wrapper {
+    width: 400px;
+    margin: 10% auto;
+}
+
+.content {
+    background: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 400px;
+}
+
+.date, .time {
+    font-weight: 300;
+    font-size: 1.5em;
+    padding-left: 20px;
+  
+}
+
+.date {
+    border-bottom: 0px solid #eee;
+    font-family: "Pacifico";
+     margin-bottom: -30px;
+}
+
+.time {
+    font-size: 3em;
+  display:none;
+}
+
+small {
+display:none;
+font-size: 0px;
+}
+
+.resolutions {
+  background-color: rgba(255,255,255,0.2);
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 20px;
+  padding-top: 0px;
+  border-radius: 5px;
+  border: 1px solid #CCC0A4;
+  width: fit-content;
+}
+
+hr {
+ border:1px solid papayawhip;
+}
+
+.accordion {
+  background-color: transparent;
+  color: #685B3B;
+  cursor: url('https://img.icons8.com/material-rounded/12/null/hand-cursor.png'), auto;
+  padding: 5px 0px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: inherit;
+  transition: 0.4s;
+  font-family: "Kavoon";
+  
+}
+
+.active, .accordion:hover {
+  background-color: rgba(255,255,255,0);
+  color: #E9E4D8;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: inherit;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0px 5px;
+  background-color: transparent;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-size: smaller;
+  color: inherit;
+}
