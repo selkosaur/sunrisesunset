@@ -3,6 +3,7 @@
  <head>
   <meta charset="UTF-8">
   <link href="https://cdn-icons-png.flaticon.com/512/7108/7108267.png" rel="icon">
+  <link href="https://cdn-icons-png.flaticon.com/512/1391/1391380.png" rel="icon">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
@@ -14,24 +15,43 @@
  </head>
  <style>
     body {
-    background: rgb(0, 0, 0);
+    background: rgb(217, 217, 217);
 }
-
+#wrap{
+display: flex;
+justify-content: flex-start;
+align-items: center;
+}
 .clock {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    color: #98d2e0;
+    transform: translateX(-50%) translateY(-50%); */
+    color: #64686f;
     font-size: 60px;
-    font-family: "M Plus Code Latin" ,"Fira Code", "Space Mono", "Rubik Mono One", "Orbitron", "Lucida Sans Typewriter", mono;
-    font-weight: 700;
+    font-family: 'Sofia Pro',"M Plus Code Latin" ,"Fira Code", "Space Mono", "Rubik Mono One", "Orbitron", "Lucida Sans Typewriter", mono;
+    font-weight: 800;
     letter-spacing: 7px;
+    text-align: left; 
+    
+   /*  width:90%; */
    
+}
+
+#MyClockDisplay{
+    text-align: left;
+}
+.clock span{
+    display: block;
 }
  </style>
  <body>
-  <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+  <div id="wrap">
+   <div class="clock" onload="showTime()">
+    <span id="MyClockDisplay"></span>
+    <span id="ampmest"></span>
+   </div>
+  </div>
   <script>
   function showTime(){
     var date = new Date();
@@ -53,9 +73,12 @@
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
     
-    var time = h + ":" + m + ":" + s + " " + session +" est";
+    var time = h + ":" + m + ":" + s;// + " " + session +" est";
+    var ampm = session +" est";
     document.getElementById("MyClockDisplay").innerText = time;
     document.getElementById("MyClockDisplay").textContent = time;
+    document.getElementById("ampmest").innerText = ampm;
+    document.getElementById("ampmest").innerText = ampm;
     
     setTimeout(showTime, 1000);
     
