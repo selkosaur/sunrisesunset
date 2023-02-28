@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=M+PLUS+Code+Latin&family=Rubik+Mono+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
   <title>clock</title>
- <!-- <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/817/817757.png" type="image/x-icon"> -->
+  <!-- <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/817/817757.png" type="image/x-icon"> -->
  </head>
  <style>
     body {
@@ -21,9 +21,10 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    color: #90bac4;
+    color: #98d2e0;
     font-size: 60px;
-    font-family: "Space Mono", "Rubik Mono One", "Orbitron", "Lucida Sans Typewriter", mono;
+    font-family: "M Plus Code Latin" ,"Fira Code", "Space Mono", "Rubik Mono One", "Orbitron", "Lucida Sans Typewriter", mono;
+    font-weight: 700;
     letter-spacing: 7px;
    
 }
@@ -44,14 +45,14 @@
     
     if(h > 12){
         h = h - 12;
-        session = "PM";
+        session = "pm";
     }
     
-    h = (h < 10) ? "0" + h : h;
+   // h = (h < 10) ? "0" + h : h;
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
     
-    var time = h + ":" + m + ":" + s + " " + session;
+    var time = h + ":" + m + ":" + s + " " + session +" est";
     document.getElementById("MyClockDisplay").innerText = time;
     document.getElementById("MyClockDisplay").textContent = time;
     
