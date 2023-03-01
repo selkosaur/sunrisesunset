@@ -1,0 +1,295 @@
+::-webkit-scrollbar {width:5px;height:5px;background:#efefff;}
+::-webkit-scrollbar-thumb {background:#eee;}
+
+::selection {background:#fff; color:#000;}
+::-webkit-selection {background:#fff; color:#000;}
+::-moz-selection {background:#fff; color:#000;}
+::-o-selection {background:#fff; color:#000;}
+
+/* General
+http://www.neoprogrammics.com/downloads/10-deg_blank_grid.png
+https://static.tumblr.com/dec1cdd7b3bd628babfdff7ec60ba093/74cq7bz/GUco0jjd4/tumblr_static_3g8tifp9wy04k8kw4kwow84ok.png
+https://static.tumblr.com/74cq7bz/9ULo1jebo/6.jpg
+https://41.media.tumblr.com/87bad96ab5c7a8ee8299f4e3d0ff7b23/tumblr_nnwn4yyHBK1u75b1mo1_500.png
+https://40.media.tumblr.com/100da03e9145c41c41aab9e2050a9c62/tumblr_nbsorwpDF31s8m67xo4_1280.png
+*/
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;800&display=swap);
+
+
+body {
+    margin:0px;
+    color:#aaaaaa;
+    background:url('')#efefff fixed center top repeat;    
+  /*  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;*/
+    font-smooth:always;
+    -webkit-font-smoothing:antialiased; 
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a:link, a:active, a:visited {text-decoration:none;}
+pre, p, blockquote,body,big,small,sub,sup {font-size:9px;}
+p, body, pre, em{font-family:'Open Sans',Arial,Helvetica,sans-serif;}
+
+/* Credit & Pagi */
+
+.c {
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.cp {margin:0px 10px;}
+.pag a{
+    margin:0px 5px;
+    padding:5px;
+    border:1px solid #aaaaaa;
+    font:white;
+    background:rgba(255,255,255,.5);
+    
+}
+
+.pag {
+    
+    position:relative;
+    margin:0px;
+    
+}
+
+.c, .pag {
+    text-align:center;
+}
+
+
+/* Common Aesthetics lol */
+
+.bx {padding:5px;}
+#sidebar, .entry {
+    background:#fff;
+    border:1px solid #eee;
+    box-shadow:rgba(0,0,0,0.05)2px 2px 1px;
+}
+
+/* Sizing Backups */
+
+#center {
+    min-width:152px;
+    width:352px;
+    max-width:752px;
+}
+
+.entry {
+    min-width:150px;
+    width:350px;
+    max-width:750px;
+}
+
+#sidebar {
+    min-width:55px;
+    width:100px;
+    max-width:300px;
+}
+
+/* Containers */
+
+#center {
+    position:relative;
+    margin:75px auto;
+    width:calc(400px + 2px);
+}
+
+.entry img {max-width:100%;}
+.entry {margin:75px 0px;width:400px;}
+
+/* Sidebar */
+
+#sidebar {
+    position:fixed;
+    border-top:0px;
+    width:100px;
+    margin-left:calc(-100px + -75px + -2px);
+}
+
+.image,.desc,.links a,.lb {border-top:1px solid #eee;}
+.image img{width:100%;}
+.image {padding:3px;}
+.desc{padding:13px;}
+
+.links a i{
+    margin-right:3px;
+    
+}
+
+.links a{display:block;padding:7px 8px;}
+.lb {display:none;padding:7px;}
+.lb a:hover {background:none;border-bottom:1px solid;}
+.lb a {
+    display:inline-block;
+    border:0px;
+    padding:0px 0px 1px;
+    margin:4px;
+    border-bottom:1px solid #eee;
+}
+
+/* Titles */
+
+h2 {
+    margin:0px;
+    padding:10px;
+    font-size:10px;
+    font-weight:400;
+    letter-spacing:0.5px;
+    border-bottom:1px solid #eee;
+}
+
+h3 {
+    margin:10px 0px;
+    font-weight:400;
+    font-size:9px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.src {border-bottom:1px solid #eee;padding:7px 8px;}
+.qut {padding:20px;font-size:10px;letter-spacing:0.25px;}
+
+/* Permalinks */
+
+.p {
+    padding:10px;
+    text-transform:lowercase;
+    border-top:1px solid #eee;
+}
+
+.p a{display:inline-block;margin:0px 1px;}
+.p b{margin:0px 2px;font-weight:400;}
+.tags {margin-top:3px;}
+.tags a{margin:0px 7px 0px 0px;}
+
+/* Audio & Chat */
+
+.lines {padding:10px;border-top:1px solid #eee;}
+.lines:first-child,.chat h2{border:none;}
+.lines b{display:block;font-weight:400;}
+
+.play {
+    float:left;
+    padding:10px;
+    background:#e4e4e4;
+    margin-right:15px;
+    height:27px;
+}
+
+.soundcloud_audio_player{padding:10px;}
+.audio {height:47px;padding:10px;}
+.au {padding:3px 0px;}
+.au span{display:block;margin:5px 0px;}
+.tumblr_audio_player {width:27px;height:27px;overflow:hidden;}
+
+/* Text */
+
+ol, ul {padding:0px;list-style-type:none;}
+ul li {position:relative;padding-left:20px;}
+ul li:before {
+    content:'';
+    position:absolute;
+    display:block;
+    top:8px;
+    left:0px;
+    width:10px;
+    height:1px;
+    background:#eee;
+}
+
+p {margin:10px 0px;}
+b,strong {font-weight:600;}
+blockquote p{margin:10px 0px;}
+blockquote p:first-child{margin:0px 0px 10px;}
+blockquote p:last-child{margin:10px 0px 0px;}
+blockquote p:only-child{margin:0px;}
+blockquote{
+    margin:10px 0px;
+    padding-left:10px;
+    border-left:1px solid #eee;
+}
+
+pre { 
+    margin:0px;
+    white-space:pre-wrap;
+    white-space:-moz-pre-wrap;
+    white-space:-pre-wrap;
+    white-space:-o-pre-wrap;
+    word-wrap:break-word;
+}
+
+/* Captions */
+
+.txt,.ans,.cap,.au_cap {padding:10px 20px;}
+.cap,.au_cap {border-top:1px solid #eee;}
+ 
+/* Photosets */
+ 
+#tumblr_lightbox,.tmblr-lightbox {
+    background:rgba(239,239,255,0.75)!important;
+}
+ 
+#vignette,#tumblr_lightbox_caption,.vignette,.lightbox-caption{
+    opacity:1!important;
+}
+ 
+#tumblr_lightbox_center_image, #tumblr_lightbox_left_image,
+#tumblr_lightbox_right_image, .lightbox-image {
+    box-shadow:none!important;
+    border-radius:0px!important;
+    background:#fff!important;
+    padding:5px!important;
+    border:1px solid #eee!important;
+}
+
+/* Ask */
+
+.ask h2 {padding:0px 0px 2px;margin-bottom:10px;display:inline-block;}
+.ask {padding:15px;border-bottom:1px solid #eee;}
+
+/* Permalink Page + Postnotes */
+
+.pph {text-transform:lowercase;}
+.perma {
+    padding:15px;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+}
+
+.pmt a:after {content:',';}
+.pmt a:last-of-type:after {content:'.';}
+.pn ul,.pn ol {margin:0px;}
+.pn li{margin:5px;}
+.pn,.pn img{display:none;}
+.pn {padding:10px;border-top:1px solid #eee;font-size:8.5px;}
+.pnh{display:block;padding:7px 8px;font-weight:600;}
+
+/* Tooltips */
+
+#s-m-t-tooltip{
+    max-width:300px;
+    margin:15px;
+    z-index:99999999;
+    padding:7px;
+    background:#fff;
+    border:1px solid #eee;
+}
+
+/* Common Styles */
+
+.ask,p,blockquote,.lines,.pn,.qut{line-height:160%;}
+.perma,.tags,.cap,ul,ol,.desc{line-height:175%;}
+a:hover, a h2:hover{color:#e4ddf8;-webkit-transition: all 0.3s ease-out;-moz-transition: all 0.3s ease-out;transition: all 0.3s ease-out;}
+a,.p,.perma,.src,.lines b,.tn,h2,.ask,ul,ol{color:#777777;-webkit-transition: all 0.3s ease-out;-moz-transition: all 0.3s ease-out;transition: all 0.3s ease-out;}
+.lines b,.tn,.src,.pag,.ask{letter-spacing:0.3px;}
+h2 a i,.pag a i{margin:0px 2px;}
+
+/* Etc */
+
+.notes img {width:0px;}
+img {margin:0px;display:block;}
