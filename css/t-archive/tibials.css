@@ -1,0 +1,641 @@
+
+
+::selection {background-color:rgba(0,0,0,.1);color:black;}
+::-moz-selection {background:rgba(0,0,0,.1); color:black;}
+::-webkit-selection {background:rgba(0,0,0,.1); color:black;}
+
+::-webkit-scrollbar-thumb:vertical {background:rgba(0,0,0,.25) repeat; height: 5px;}
+::-webkit-scrollbar-thumb:horizontal {background-color:transparent ; height:5px!important;}
+::-webkit-scrollbar {background:url(https://31.media.tumblr.com/bef77d6882e15d09480c2fc74aa12368/tumblr_inline_mydbncXyLX1qak244.png); height:5px; width:5px; -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;}
+
+a img, img a {border:none;}
+
+* {padding:0;margin:0;}
+
+.clear {clear:both;}
+
+iframe {top:0px !important;opacity:1;}
+
+#wrapper {
+	width:520px;
+	margin:0 auto;
+}
+
+body {
+	background:url(https://31.media.tumblr.com/bef77d6882e15d09480c2fc74aa12368/tumblr_inline_mydbncXyLX1qak244.png) fixed center;
+	border-top:0px solid #000000;
+	 -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+#top {
+	margin:45px 0 70px 0;
+}
+
+#header {
+	float:left;
+}
+@font-face {font-family: "bangalor"; src:url('https://static.tumblr.com/rmj06l2/VP8llx2mg/bangalor.ttf');}
+
+@font-face {font-family: "ocrastd"; src:url('https://static.tumblr.com/bndnaqy/iGemakd53/ocrastd.otf');}
+
+#header h1 a, #header h1 a:hover {
+	display:block;
+	text-decoration:none;
+	font-family:ocrastd;
+	font-size:60px;
+	color:#000000;
+	font-weight:normal;
+	letter-spacing:0px;
+}
+
+#header h1 {	
+	margin:6px 0 -17px 0;
+}
+
+
+#header div {
+	color:#000000;
+	font-size:14px;
+	font-family: "Georgia";
+	text-transform:lowercase;
+	font-style:italic;
+	float:left;
+	margin-top:8px;
+}
+
+#header div a {
+	color:#000000;
+	font-size:14px;
+	font-family: "Georgia";
+	text-transform:lowercase;
+	font-style:italic;
+	text-decoration:none;
+}
+
+#header div a:hover {
+	text-decoration:underline;
+}
+
+#nav {
+	float:right;
+	margin-top:32px;
+	margin-left: -32px;
+	text-align:left;
+}
+
+#nav li {
+    line-height: 40px;
+	display:inline-block;
+	list-style:none;
+	margin-left:22px;
+}
+
+
+#nav li a {
+	color:#000000;
+	font-family:trebuchet ms;
+	text-decoration:none;
+	font-weight:normal;
+	font-size:12px;
+	text-transform:lowercase;
+	padding:10px 10px 10px 10px;
+	border:solid rgba(255,255,255,.8) 1px;
+	-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5 ease-in-out;
+	
+}
+
+#nav li a:hover {
+	color:black;
+	background:rgba(0,0,0,0);
+	border:solid black 1px;
+	-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+/* CONTENT */
+
+#main {
+	width:520px;
+	margin:0 auto;
+}
+
+span.icon a, .iconp {
+	position:absolute;
+	float:left;
+	margin:0 0 0 0;
+	top:10px;
+	left:0px;
+	color:#000000;
+	font-weight:normal;
+	text-decoration:none;
+	text-indent:-9999px;
+	background:/* url('https://static.tumblr.com/0prbykj/DzhjQBxSQ/icon.png')  */ no-repeat;
+    background: url('https://img.icons8.com/small/96/null/kawaii-sushi.png');
+    background-size: contain;
+	height:27px;
+	width:27px;
+	opacity:0;
+    transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+.post:hover span.icon a, .iconp {
+    top:-3px;
+	left:-37px;
+    transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    opacity:1;
+    }
+
+span.meta a {
+	position:absolute;
+	margin:0 0 0 0;
+	font-family:consolas;
+	font-size:9px;
+	color:black;
+	font-weight:normal;
+	text-decoration:none;
+	text-transform:uppercase;
+	text-decoration:none;
+	text-align:right;
+}
+
+.post:hover span.meta a.timestamp {
+    width: 40px;
+    top: 30px;
+    left: -54px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    opacity:1;
+}
+
+span.meta a.timestamp {
+    width: 40px;
+    top: 30px;
+    left:0px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    opacity:0;
+    }
+    
+span.meta .count {
+    width: 85px;
+    top: 42px !important;
+    left:0px;
+      -webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    opacity:0;
+    }
+    
+.post:hover span.meta .count{
+    left: -100px;
+    transition: all 0.5s ease-in-out;
+      -webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    opacity:1;
+}
+    
+    
+
+span.meta a b {
+	color:#000000;
+}
+
+/* GENERAL POSTS */
+
+.post {
+	margin:0 0 80px 0;
+	position:relative;
+	border:1px solid black;
+	padding:10px;
+	background:rgba(255,255,255,.4);
+}
+
+.post .ttl a, .ttlp {
+	font-family:consolas;
+	font-weight:normal;
+	color:#262626;
+	font-size:21px;
+	padding:7px;
+	background:transparent;
+	text-decoration:none;
+	text-transform:lowercase;
+	 -webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.ttl a:hover {
+	background:rgba(255,255,255,.2);
+	 -webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.ttl a span {
+	padding:7px 0px 7px 4px;
+}
+
+.post .body {
+	margin:20px 0 0 0;
+	font-family:trebuchet ms;
+	font-size:10px;
+	color:#000000;
+	line-height:17px;
+	letter-spacing:0px;
+}
+	
+.post .body a, .item .text a, .chat ul li a, .quote .source a {
+	color:#000000;
+	text-decoration:none;
+	font-variant:normal;
+	font-family:trebuchet ms;
+	font-size:10px;
+}
+
+.post .body a:hover, .item .text a:hover, .chat ul li a:hover, .quote .source a:hover {
+	text-decoration:underline;
+}
+
+
+.post p {
+	margin:12px 0 12px 0;
+}
+
+.post pre {
+	margin:12px 0 12px 15px;
+	font-size:10px;
+}
+
+.post ul, .post ol {
+	margin:12px 0 12px 40px;
+}
+
+.post ul li {
+	list-style:circle;
+	margin-bottom:3px;
+}
+
+.post ol li {
+	margin-bottom:3px;
+}
+
+.post blockquote {
+	margin-left:20px;
+	border-left:1px solid #ccc;
+	padding-left:10px;
+	color:black;
+}
+
+.source {
+	font-family:trebuchet ms;
+	font-size:10px;
+	font-variant:normal;
+	text-transform:none;
+	color:#000000;
+	margin:11px 0px 0 0;
+	
+}
+
+.source a {
+	color:#000000;
+	text-decoration:none;
+}
+
+.source a:hover {
+	text-decoration:underline;
+}
+
+#daybox {
+	margin-bottom:45px;
+}
+
+#day {
+	font-family:trebuchet ms;
+	font-variant:small-caps;
+	font-size:18px;
+	color:#000000;
+}
+
+/* PHOTOS, VIDEOS, AUDIO */
+
+.photo .body, .video .body, .audio.body {
+	margin-top:10px;
+	
+}
+
+/* QUOTES */
+.quote {
+	margin-top:-15px;
+}
+
+.quote .body {
+	font-family:trebuchet ms;
+	font-size:18px;
+	line-height:25px;
+}
+
+.quote span.icon a {
+	top:0px;
+}
+
+.quote .byline {
+	float:right;
+}
+
+.quote .source {
+	font-family:trebuchet ms;
+	font-size:10px;
+	color:#000000;
+	line-height:17px;
+	font-variant:normal !important;	
+}
+
+/* CHATS */
+
+.chat ul {
+	margin:20px 0 0 0;
+}
+
+.chat ul li {
+	list-style:none;
+	font-family:trebuchet ms;
+	font-size:10px;
+	color:#000000;
+	padding:8px;
+}
+
+.label {
+	font-weight:normal;
+}
+
+li.odd {
+	background:rgba(255,255,255,.2);
+}
+
+li.even {
+	background:rgba(255,255,255,.2);
+}
+
+/* PAGENAV */
+#pagenav {
+	margin:60px 0 0 0;
+}
+
+#pagenav .inner {
+	text-align:center;
+	position:relative;
+}
+
+#older, #newer {
+    border:1px solid black;
+	color:black;
+	font-family:trebuchet ms;
+	font-size:20px;
+	text-transform:uppercase;
+	padding:7px;
+	background:transparent;
+	text-decoration:none;
+	display:block;
+	position:absolute;
+	top:-2px;
+	-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5 ease-in-out;
+}
+
+#older:hover, #newer:hover {
+	background:rgba(255,255,255,.3);
+	-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5 ease-in-out;
+}
+
+#older {
+	float:left;
+	text-align:left;
+	left:0px;
+}
+
+#newer {
+	float:right;
+	text-align:right;
+	right:10px;
+}
+
+#pages {
+	color:black;
+	font-family:"trebuchet ms";
+	font-size:11px;
+	text-transform:uppercase;
+	text-align:center;
+}
+
+/* FOOTER */
+
+#bottom {
+	border:0px solid #000000;
+	border:0px solid #000000;
+	margin:80px 0 40px 0;
+	font-family:"Lucida Grande";
+	font-size:10px;
+	color:black;
+	text-align:center;
+	padding:13px 0 13px 0;
+}
+
+#bottomp {
+	border-top:2px solid #000000;
+	border-bottom:2px solid #000000;
+	margin:0px 0 40px 0;
+	font-family:"Lucida Grande";
+	font-size:10px;
+	color:#ccc;
+	text-align:center;
+	padding:13px 0 13px 0;
+}
+
+#bottom a, #bottom a:hover, #bottom b {
+	color:black;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+.text img {
+	max-width: 100%;
+}
+
+#disqus_thread {
+    font-family:"Lucida Grande", "Lucida Sans Unicode";
+	font-size:11px;
+	color:#000000;
+	line-height:17px;
+}
+
+    #disqus_thread a {
+        color:#000000;
+    	text-decoration:none;
+    	font-variant:small-caps;
+    	font-family:trebuchet ms;
+    	font-size:11px;
+    }
+    
+ol.notes {
+    font-family:trebuchet ms;
+	font-size:10px;
+	color:#000000;
+	line-height:17px;
+	font-variant:normal !important;
+	padding: 0px;
+	margin: 20px 0 60px 0;
+	list-style-type: none;
+	clear: both
+}
+
+ol.notes a {
+    color: #000000;
+    text-decoration: none;
+}
+
+ol.notes img.avatar {
+    max-width: 16px;
+	margin: 2px 8px 0 0;
+	float: left;
+}
+
+ol.notes span.action {
+	float: left;
+	padding-top: 1px;
+	line-height: 18px;
+}
+
+ol.notes .clear {
+	clear: both;
+	height: 1px;
+}
+
+ol.notes blockquote {
+	padding: 4px 10px;
+	margin: 7px 0px 0px 25px;
+	font-weight: normal;
+}
+
+ol.notes blockquote a {
+	text-decoration: none;
+}
+
+ol.notes .answer_content {
+	font-weight: normal;
+}
+
+    
+    #editthis{
+    /* EDIT THIS STUFF TO POSITION YOUR MUSIC PLAYER */
+    position:fixed;
+    top:20px; /* YOU CAN CHANGE THIS TO BOTTOM */
+    left:20px; /* YOU CAN CHANGE THIS TO RIGHT */
+    z-index:99;}
+   
+/* I DON'T RECOMMEND TOUCHING THIS STUFF */
+#music1{
+    position:fixed;
+    padding:2px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;}
+   
+#music1:hover #music2{
+    opacity:0;
+    margin-top:-25px;
+    z-index:-1;}
+   
+#music1:hover #music3{
+    opacity:1;
+    margin-top:-5px;
+    z-index:99;}
+   
+#music1:hover #musiclist{
+    opacity:0;}
+   
+#music2{
+    /* THIS IS THE GIF DIV */
+    opacity:1;
+    background-color:rgba(255,255,255,.1);
+    border:0px dotted #ccc;
+    padding:6px;
+    -webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5 ease-in-out;
+    }
+   
+#music3{
+    /* THIS IS THE ACTUAL MUSIC PLAYER DIV */
+    opacity:0;
+    position:fixed;
+    background-color:rgba(255,255,255,.1);
+    border:1px dashed #ccc;
+    width:55px;
+    height:20px;
+    z-index:99;
+    margin-left:-5px;
+    overflow:hidden;
+    -webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5 ease-in-out;}
+   
+#musiclist{
+    /* THIS IS THE PLAYLIST DIV */
+    opacity:0;
+    position:fixed;
+    padding:6px;
+    border:1px dashed #ccc;
+    margin-left:10px;
+    margin-top:10px;
+    font-family:ronda;
+    font-size:9px;
+    background-color:#fff;
+    width:120px;
+    color:#999;
+    text-transform:lowercase;
+    -webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5 ease-in-out;}
+   
+#musiclist h1{
+    /*THIS IS THE PLAYLIST TITLE SETTINGS*/
+    font-family:ronda;
+    font-size:10px;
+    margin-top:0px;
+    margin-bottom:2px;
+    font-style:normal;
+    font-weight:normal;
+    color:#000000; /*THIS IS THE PLAYLIST TITLE COLOR*/
+    border-bottom:1px dotted #ccc;
+    text-align:left;
+    text-transform:uppercase;}
+  
