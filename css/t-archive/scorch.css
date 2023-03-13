@@ -92,7 +92,7 @@
     .entry {
       width: 500px;
       margin-top: 80px;
-      font-family: nunito, sans-serif;
+      font-family:'Source Sans Pro', nunito, sans-serif;
       padding: 15px;
       background-color: #ffffff;
       border: 1px solid #bbbbbb;
