@@ -90,7 +90,7 @@ a {
 .entry {
     width           : 500px;
     margin-top      : 80px;
-    font-family     : 'Sofia Pro', sans-serif;
+    font-family     : 'Questa Sans','Sofia Pro', sans-serif;
     padding         : 15px;
     background-color: #ffffff;
     border          : 1px solid #bbbbbb;
@@ -151,7 +151,7 @@ a {
 
 .ptop-date:hover {
     background-color: var(--a1);
-    color           : green;
+    color           : #ffffff;
 }
 
 .entry:nth-child(4n-3) .ptop-date:hover {
