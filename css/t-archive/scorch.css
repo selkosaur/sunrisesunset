@@ -1,4 +1,6 @@
 @import url('https://selkosaur.github.io/font/sofiapro/stylesheet.css');
+@import url('https://selkosaur.github.io/font/questasans/stylesheet.css');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@100;200;300;400;500;600;800;900&display=swap');
 
 :root {
     --NPF-Caption-Spacing: 1em;
@@ -90,7 +92,7 @@ a {
 .entry {
     width           : 500px;
     margin-top      : 80px;
-    font-family     : 'Questa Sans','Sofia Pro', sans-serif;
+    font-family     : 'Source Sans Pro','Questa Sans','Sofia Pro', sans-serif;
     padding         : 15px;
     background-color: #ffffff;
     border          : 1px solid #bbbbbb;
