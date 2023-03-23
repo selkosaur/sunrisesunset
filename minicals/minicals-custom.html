@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>minicals</title>
+  <link href="minicals-custom.css" rel="stylesheet">
+  <!-- scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- icon font -- cappuccicons -->
+  <script src="//pull.cappuccicons.com/cpf.js"></script>
+  <!-- tooltips -->
+  <script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+  <script>
+      ;(function ($) {
+        $(document).ready(function () {
+          $('a[title], img[title], span[title], td[title]').style_my_tooltips({
+            tip_follows_cursor: true,
+            tip_delay_time: 30,
+            tip_fade_speed: 300,
+            attribute: 'title'
+          })
+        })
+      })(jQuery)
+  </script>
+  <style>
+      span {
+        cursor: default;
+      }
+
+      div.calflexwrap {
+        display: flex;
+        /* border: 3px solid rgb(111, 111, 150); */
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .calflexwrap div {
+        padding: 0px;
+        /* background-color: whitesmoke; */
+
+        margin: 10px;
+      }
+
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #cae4ff89;
+      }
+      ::-webkit-scrollbar {
+        background-color: transparent;
+        width: 1px;
+        height: 1px;
+      }
+
+      ::selection{
+        background-color: #eeeeee2c;
+      }
+    body {
+    background-color:#fcfcfc;
+    background-image:url('https://images.unsplash.com/photo-1514477917009-389c76a86b68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1667&q=80');
+    background-attachment:fixed;
+    background-position:center center;
+    
+    
+    background-repeat:repeat;
+    background-size:auto;
+    
+    color:#4f4e4e;
+    font-family: 'Karla', sans-serif;
+    font-size:11px;
+    /* line-height:calc(11px + 6px); */
+    font-weight:400;
+    text-align:justify;
+    margin:0;
+    }
+  </style>
+ </head>
+ <body>
+  <div class="calflexwrap">
+   <div id="thismonth" class="minical"></div>
+   <div id="onemonthfuture" class="minical"></div>
+   <div class="minical" id="twomonthsfuture"></div>
+   <div class="minical" id="threemonthsfuture"></div>
+  </div>
+  <script src="minicals.js"></script>
+  <script>
+    buildMiniCal(thismonth);
+    buildMiniCal(onemonthfuture,1);
+    buildMiniCal(twomonthsfuture,2);
+    buildMiniCal(threemonthsfuture,3);
+    
+      addEventsTest('03-31-2023')
+      addEventsTest('03-01-2023')
+      addEventsTest('04-02-2023')
+      addEventsTest('04-07-2023')
+      addEventsTest('04-11-2023')
+      addEventsTest('04-12-2023')
+      addEventsTest('04-29-2023')
+      addEventsTest('05-06-2023')
+      addEventsTest('05-16-2023')
+      addEventsTest('05-26-2023')
+      addEventsTest('05-27-2023')
+      addEventsTest('05-31-2023')
+      addEventsTest('06-06-2023')
+      addEventsTest('06-16-2023')
+      addEventsTest('06-04-2023')
+      addEventsTest('06-19-2023')
+  </script>
+ </body>
+</html>
