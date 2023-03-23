@@ -223,6 +223,9 @@ font-family:'cappuccicons';
 .minical .today-block {
     background-color: var(--minical-today-bgcolor) !important;
 }
+.minical span{
+     cursor:default;
+}
 
 .minical table {
     border-collapse: collapse;
