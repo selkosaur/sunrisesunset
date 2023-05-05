@@ -336,11 +336,11 @@ function showTime(){
     document.getElementById("MyClockDisplay").innerText = time;
     document.getElementById("MyClockDisplay").textContent = time;
     
-    setTimeout(showTime, 1000);
+   
     
 }
-
-showTime();
+  
+let showtimerepeat = setInterval(showTime, 1000);
 </script>
 <div id="date" class="date"></div>
 <div id="time" class="time"></div>
@@ -371,7 +371,7 @@ function timer() {
 }
 
 getDate();
-let timeout = setInterval(timer,100);
+let timeout = setInterval(timer,1000);
    </script>
 <div id="sunrisewidget">
 <small><a href="https://time.is/Fulton,_Howard,_Maryland" id="time_is_link" rel="nofollow" style="font-size:13px">in Fulton:</a></small>
