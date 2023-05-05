@@ -358,7 +358,7 @@ function getDate() {
 }
 
 function timer() {
-    setTimeout(timer, 1000);
+   
     var d = new Date();
     var hours = d.getHours();
     var minutes = d.getMinutes();
@@ -367,11 +367,11 @@ function timer() {
                   (minutes < 10 ? "0" + minutes : minutes)
                   ].join(':') + ampm;
     time.innerHTML = strTime;
-    setTimeout(timer, 1000);
+   
 }
 
 getDate();
-timer();
+let timeout = setInterval(timer,100);
    </script>
 <div id="sunrisewidget">
 <small><a href="https://time.is/Fulton,_Howard,_Maryland" id="time_is_link" rel="nofollow" style="font-size:13px">in Fulton:</a></small>
