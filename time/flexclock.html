@@ -1,86 +1,91 @@
 <!DOCTYPE html>
+
 <head>
- <meta charset="UTF-8">
- <title>current time (est)</title>
- <link href="https://cdn-icons-png.flaticon.com/512/1391/1391380.png" rel="icon">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link href="/font/sofiapro/stylesheet.css" rel="stylesheet">
- <link href="/sunrisesunset/css/scrollbar.css" rel="stylesheet">
- <style>
-   *{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: 'Sofia Pro', sans-serif;
-  color: #2C4A64;
-  font-size: 100%;
-}
-.main{
-  height: 100vh;
-  background-color:rgb(217, 217, 217);
-  background-size: cover;
-  
- /* background: url('https://i.ibb.co/jfLZFhm/Bitmap.png') no-repeat top center;*/
-}
+  <meta charset="UTF-8">
+  <title>current time (est)</title>
+  <link href="https://cdn-icons-png.flaticon.com/512/1391/1391380.png" rel="icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/font/sofiapro/stylesheet.css" rel="stylesheet">
+  <link href="/sunrisesunset/css/scrollbar.css" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      font-family: 'Sofia Pro', sans-serif;
+      color: #2C4A64;
+      font-size: 100%;
+    }
 
-h1{
-  text-align: center;
-  font-weight: 400;
-  font-size: 3rem;
-  padding-top: 1.875rem;
-  text-transform: uppercase;
-}
+    .main {
+      height: 100vh;
+      background-color: rgb(217, 217, 217);
+      background-size: cover;
 
-.countdown{
-  display: flex;
-  justify-content: center;
-  gap: 0px;
- /* border: 1px solid steelblue;*/
-}
+      /* background: url('https://i.ibb.co/jfLZFhm/Bitmap.png') no-repeat top center;*/
+    }
 
+    h1 {
+      text-align: center;
+      font-weight: 400;
+      font-size: 3rem;
+      padding-top: 1.875rem;
+      text-transform: uppercase;
+    }
 
-  
-.countdown > div{
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0px;
-  /*box-shadow: 5px 5px 0px rgba(0,0,0,0.25);*/
-  width: 3.125rem;
-  height: 5rem;
-  border-radius: 5px;
- /* border: 1px solid magenta; */
-}
-.number {
-  font-weight: 800;
-  font-size: 2.75rem;
-  color: #64686f;
-}
-
-div.colon{
-  flex-shrink: 6;
-  width: 0.938rem;
-}
-
-div.word{
-  margin-left: 1.25rem;
-}
-div.singlehour{
-  width: 1.563rem;
-}
-
-div span:last-of-type{
-  font-size: 0.75rem;
-}
-
-.timezone{
-  font-size: 2.5em;
-}
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 0px;
+      /* border: 1px solid steelblue;*/
+    }
 
 
-/*
+
+    .countdown>div {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0px;
+      /*box-shadow: 5px 5px 0px rgba(0,0,0,0.25);*/
+      width: 3.125rem;
+      height: 5rem;
+      border-radius: 5px;
+      /* border: 1px solid magenta; */
+    }
+
+    .number {
+      font-weight: 800;
+      font-size: 2.75rem;
+      color: #64686f;
+      font-variant-numeric: tabular-nums;
+    }
+
+    div.colon {
+      flex-shrink: 6;
+      width: 0.938rem;
+    }
+
+    div.word {
+      margin-left: 1.25rem;
+    }
+
+    div.singlehour {
+      width: 1.563rem;
+    }
+
+    div span:last-of-type {
+      font-size: 0.75rem;
+    }
+
+    .timezone {
+      font-size: 2.5em;
+    }
+
+
+    /*
 @media screen and (max-width:600px){
   h1{
     font-size: 40px;
@@ -110,84 +115,86 @@ div span:last-of-type{
 }
 }
 */
- </style>
+  </style>
 </head>
+
 <body>
- <div class="main">
-  <!-- <h1>clock</h1> -->
-  <div class="countdown">
-   <div id="hourdiv">
-    <span class="number" id="hour"></span>
-    <span></span>
-   </div>
-   <div class="colon">
-    <span class="number colon" id="colon1">:</span>
-    <span></span>
-   </div>
-   <div>
-    <span class="number" id="minute"></span>
-    <span></span>
-   </div>
-   <div class="colon">
-    <span class="number colon" id="colon2">:</span>
-    <span></span>
-   </div>
-   <div>
-    <span class="number" id="seconds"></span>
-    <span></span>
-   </div>
-   <div class="word">
-    <span class="number" id="ampm"></span>
-    <span></span>
-   </div>
-   <div class="word">
-    <span class="number" id="est"></span>
-    <span></span>
-   </div>
+  <div class="main">
+    <!-- <h1>clock</h1> -->
+    <div class="countdown">
+      <div id="hourdiv">
+        <span class="number" id="hour"></span>
+        <span></span>
+      </div>
+      <div class="colon">
+        <span class="number colon" id="colon1">:</span>
+        <span></span>
+      </div>
+      <div>
+        <span class="number" id="minute"></span>
+        <span></span>
+      </div>
+      <div class="colon">
+        <span class="number colon" id="colon2">:</span>
+        <span></span>
+      </div>
+      <div>
+        <span class="number" id="seconds"></span>
+        <span></span>
+      </div>
+      <div class="word">
+        <span class="number" id="ampm"></span>
+        <span></span>
+      </div>
+      <div class="word">
+        <span class="number" id="est"></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="countdown number timezone">(eastern time)</div>
   </div>
-  <div class="countdown number timezone">(eastern time)</div>
- </div>
- <script>
-    function showTime(){
-    var date = new Date();
-    var h = date.getHours(); // 0 - 23
-    var m = date.getMinutes(); // 0 - 59
-    var s = date.getSeconds(); // 0 - 59
-    var session = "am";
-    
-    if(h == 0){
+  <script>
+    function showTime() {
+      var date = new Date();
+      var h = date.getHours(); // 0 - 23
+      var m = date.getMinutes(); // 0 - 59
+      var s = date.getSeconds(); // 0 - 59
+      var session = "am";
+
+      if (h === 0) {
         h = 12;
-    }
-    
-    if(h > 12){
+      }
+
+      if (h > 12) {
         h = h - 12;
         session = "pm";
-    }
-    
-   // h = (h < 10) ? "0" + h : h;
-    m = (m < 10) ? "0" + m : m;
-    s = (s < 10) ? "0" + s : s;
-    
-    var time = h + ":" + m + ":" + s;// + " " + session +" est";
-    var ampm = session +" est";
-    document.getElementById("hour").innerText = h;
-    document.getElementById("minute").innerText = m;
-    document.getElementById("seconds").innerText = s;
-    document.getElementById("ampm").innerText = session;
-    if(h <10){
-      document.getElementById("hourdiv").classList.add("singlehour");
-    }
-   /* document.getElementById("MyClockDisplay").innerText = time;
-    document.getElementById("MyClockDisplay").textContent = time;
-    document.getElementById("ampmest").innerText = ampm;
-    document.getElementById("ampmest").innerText = ampm; */
-    
-    
-    setTimeout(showTime, 1000);
-    
-}
+      }
 
-showTime();
- </script>
+      // h = (h < 10) ? "0" + h : h;
+      m = (m < 10) ? "0" + m : m;
+      s = (s < 10) ? "0" + s : s;
+
+      var time = h + ":" + m + ":" + s;// + " " + session +" est";
+      var ampm = session + " est";
+      document.getElementById("hour").innerText = h;
+      document.getElementById("minute").innerText = m;
+      document.getElementById("seconds").innerText = s;
+      document.getElementById("ampm").innerText = session;
+      if (h < 10) {
+        document.getElementById("hourdiv").classList.add("singlehour");
+      }
+      /* document.getElementById("MyClockDisplay").innerText = time;
+       document.getElementById("MyClockDisplay").textContent = time;
+       document.getElementById("ampmest").innerText = ampm;
+       document.getElementById("ampmest").innerText = ampm; */
+
+
+      setTimeout(showTime, 1000);
+
+    }
+
+    showTime();
+  </script>
 </body>
+
 </html>
